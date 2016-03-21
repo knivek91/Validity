@@ -21,9 +21,7 @@ var Person = function() {
 						case "required":
 							input.require('Ingrese la información solicitada.');
 							break;
-						case "readOnly":
-							input.require('Ingrese la información solicitada.');
-							break;
+
 						case "maxLength":
 							if (input.val().length > parseInt(validate.value, 10))
 								input.maxLength(parseInt(validate.value, 10));
@@ -55,10 +53,7 @@ var Person = function() {
 
 			if (input[0].required)
 				attrs.push({'key':'required', 'value': input[0].required});
-
-			if(input[0].readOnly)
-				attrs.push({'key':'readOnly', 'value': input[0].readOnly});
-
+			
 			if(input[0].maxLength > -1)
 				attrs.push({'key':'maxLength', 'value': input[0].maxLength});
 
