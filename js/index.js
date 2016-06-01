@@ -28,17 +28,18 @@ var Person = function() {
 							break;
 						case "max":
 							input.match('number')
-								 .lessThanOrEqualTo(validate.value,'El valor maximo es de: ');
+								 .lessThan(validate.value,'El valor maximo es de: ');
 								 break;
 
 						case "min":
-							input.greaterThanOrEqualTo(validate.value,'El valor minimo es de: ' + validate.value);
+							input.greaterThan(validate.value,'El valor minimo es de: ' + validate.value);
 							break;
 
 						case "pattern":
 						break;
 							
 					}
+
 				});
 
 			});
